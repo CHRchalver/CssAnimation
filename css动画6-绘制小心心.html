@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation-6</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        
+        body
+        {
+            width: 100vw;
+            height: 100vh;
+            background: #34495e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .heart{
+            width: 200px;
+            height: 200px;
+            background: red;
+            transform: rotate(45deg) scale(1);
+            animation-name: hd;
+            animation-duration: 4s;
+            opacity: 1;
+            animation-iteration-count: infinite;
+        }
+        @keyframes hd {
+            25%{
+                transform: rotate(45deg) scale(.4);
+                opacity: .7;
+            }
+            50%{
+                transform: rotate(45deg) scale(1.2);
+                opacity: 1;
+            }
+            75%{
+                transform: rotate(45deg) scale(.4);
+                opacity: .8;
+            }
+            to{
+                transform: rotate(45deg) scale(1);
+                opacity: 1;
+            }
+        }
+        .heart::before{
+            content: '';
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            border-radius: 50%;
+            background: red;
+            transform: translateX(-100px);
+        }
+        
+        .heart::after{
+            content: '';
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            border-radius: 50%;
+            background: red;
+            transform: translateY(-100px);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="heart"></div>
+</body>
+</html>

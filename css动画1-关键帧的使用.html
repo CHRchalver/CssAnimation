@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation-1</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        
+        body
+        {
+            width: 100vw;
+            height: 100vh;
+            background: #34495e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main
+        {
+            width: 100px;
+            height: 100px;
+            background: white;
+            animation-name: hd;
+            animation-duration: 4s;
+        }
+        
+        @keyframes hd
+        {
+           0% {
+                background: white;
+            }
+            25%{
+                background: cornflowerblue;
+                transform: scale(2);
+            }
+            50%{
+                background: orange;
+                transform: scale(1);
+            }
+            75%{
+                background: yellow;
+                transform: scale(2);
+            }
+            100% {
+                background: red;
+                transform: scale(2
+            }
+        }
+    </style>
+</head>
+<body>
+    <main></main>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation-12</title>
+    <script src="https://kit.fontawesome.com/d1e517de9d.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        
+        body
+        {
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            grid-template: 1fr/repeat(5,1fr);
+            background: #34495e;
+        }
+        div{
+            grid-column: 3/4;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background: #f1c40f;
+            justify-self: center;
+            transform: translateY(90vh);
+            animation-name: move;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes move {
+            0%{
+                transform: translateY(0vh);
+                transition-timing-function: ease-in;
+            }
+            30%{
+                transform: translateY(10vh);
+                transition-timing-function: ease-in;
+            }
+            60%{
+                transform: translateY(40vh);
+                transition-timing-function: ease-in;
+            }
+            80%{
+                transform: translateY(60vh);
+                transition-timing-function: ease-in;
+            }
+            95%{
+                transform: translateY(75vh);
+                transition-timing-function: ease-in;
+            }
+            15%,45%,75%,85%,100%{
+                transform: translateY(90vh);
+                transition-timing-function: ease-out;
+            }
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

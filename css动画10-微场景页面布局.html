@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation-10</title>
+    <script src="https://kit.fontawesome.com/d1e517de9d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        
+        body
+        {
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            grid-template-rows: 10vh 1fr 10vh;
+
+        }
+       header{
+           background: hotpink;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           font-size: 2em;
+           color: white;
+           animation-name: translate;
+           animation-duration: .5s;
+       }
+       main{
+           background: url("background_9.jpg");
+           no-repeat;
+           background-size: cover;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           animation-name: rotate;
+           animation-duration: .5s;
+           animation-delay: 2s;
+           animation-fill-mode: backwards;
+       }
+       
+       div{
+           width: 80vw;
+           border-radius: 10px;
+           padding: 10px;
+           color: white;
+           opacity: .8;
+           box-shadow: 0 0 10px rgba(0 , 0 , 0 , .8);
+       }
+       div:nth-child(1){
+           transform: translateY(-50px);
+           background: deepskyblue;
+           animation-name: opacity;
+           animation-duration: .5s;
+           animation-delay: 3s;
+           animation-fill-mode: backwards;
+       }
+        div:nth-child(2){
+           background: orange;
+            animation-name: opacity;
+            animation-duration: .5s;
+            animation-delay: 3.5s;
+            animation-fill-mode: backwards;
+       }
+       footer{
+           background: #34495e;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           font-size: 2em;
+           color: white;
+           /*transform: scale(0);*/
+           /*animation-fill-mode: forwards;*/
+           animation-fill-mode: backwards;
+           animation-name: rotate;
+           animation-duration: .5s;
+           animation-delay: 1s;
+       }
+       @keyframes translate {
+           from{
+               transform: translateX(-100vw);
+           }
+           to{
+               transform: translateX(0vw);
+           }
+       }
+        @keyframes rotate {
+            from{
+                transform: scale(0) rotate(360deg);
+            }
+            to{
+                transform: scale(1) rotate(0deg);
+            }
+        }
+        @keyframes opacity {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>CHR</header>
+    <main>
+        <div>jQuery is a JavaScript Library.
+    
+            jQuery greatly simplifies JavaScript programming.
+    
+            jQuery is easy to learn.</div>
+        <div>Do you want a career with a future? You should add regular updates to your skills and knowledge. Unless, you have already decided that your current skills and job are good enough for your future.
+    
+            Knowledge is power, especially in the current job market. Documentation of your skills enables you to move upwards in your organization.
+    
+            Getting a certificate proves your commitment to upgrade your skills, gives you the credibility needed for more responsibilities, larger projects, and a higher salary.
+    
+            In addition, documented knowledge is often the key factor when hiring new personnel. Your certificate might advance your career or help you to start a new one.
+    
+            Also have in mind that employees with certifications increase their company's chances of retaining old and getting new customers. You will do your company a favor getting certified. Expect your company to support you in this.
+
+        </div>
+    </main>
+    <footer>chalver</footer>
+</body>
+</html>

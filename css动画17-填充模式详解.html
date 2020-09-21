@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation-17</title>
+</head>
+<body>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    
+    body
+    {
+        width: 100vw;
+        height: 100vh;
+        background: #474787;
+        display: grid;
+    }
+    ul{
+        list-style: none;
+        background: black;
+        width: 400px;
+        height: 100px;
+        align-self: center;
+        justify-self: center;
+        display: grid;
+        grid-template: 1fr/repeat(4,1fr);
+    }
+    li{
+        width: 100px;
+        height: 100px;
+        bor-right: 50%;
+        background: #ff3f34;
+        animation-name: hd;
+        animation-duration: 2s;
+        animation-delay: 2s;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+    }
+    li:nth-child(1){
+        animation-name: hd;
+    }
+    li:nth-child(2){
+        animation-name: hd;
+        animation-fill-mode: backwards;
+        /*延迟过程中属于第零帧(from)*/
+    }
+    li:nth-child(3){
+        animation-name: hd;
+        animation-fill-mode: forwards;
+        /*当执行完毕时定在结束帧*/
+    }
+    li:nth-child(4){
+        animation-name: hd;
+        animation-fill-mode: both;
+        /*起始时为第零帧，完毕时定在结束帧，与起始状态无关*/
+    }
+    @keyframes hd {
+        from{
+            transform: scale(0);
+        }
+        to{
+            transform: scale(1);
+            background: #0be881;
+        }
+        
+    }
+</style>
+<ul>
+    <li>normal</li>
+    <li>backwards</li>
+    <li>forwards</li>
+    <li></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation-7</title>
+    <script src="https://kit.fontawesome.com/d1e517de9d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        
+        body
+        {
+            width: 100vw;
+            height: 100vh;
+            background: #34495e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        ul{
+            list-style: none;
+            width: 400px;
+            height: 100px;
+            display: flex;
+        }
+        li{
+            flex: 1;
+            color: red;
+            /*border: solid 1px #ddd;*/
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        span{
+            position: absolute;
+            bottom: 0;
+        }
+        i.fa-heart{
+            font-size: 3em;
+            animation-name: hd;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            position: absolute;
+        }
+        li:nth-child(1)>i{
+            animation-direction: normal;/*普通*/
+        }
+        li:nth-child(2)>i{
+            animation-direction: reverse;/*反转*/
+        }
+        li:nth-child(3)>i{
+            animation-direction: alternate;/*轮换*/
+        }
+        li:nth-child(4)>i{
+            animation-direction: alternate-reverse;/*轮换反转*/
+        }
+        @keyframes hd {
+            to{
+                transform: scale(2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+        <i class="fas fa-heart"
+           aria-hidden="true"></i>
+            <span>normal</span>
+        </li>
+        
+        <li>
+        <i class="fas fa-heart"
+           aria-hidden="true"></i>
+            <span>reverse</span>
+        </li>
+        
+        <li>
+        <i class="fas fa-heart"
+           aria-hidden="true"></i>
+            <span>alternate</span>
+        </li>
+        
+        <li>
+        <i class="fas fa-heart"
+           aria-hidden="true"></i>
+            <span>alternate</span>
+        </li>
+        
+    </ul>
+</body>
+</html>

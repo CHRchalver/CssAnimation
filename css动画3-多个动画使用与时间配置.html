@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation-3</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        
+        body
+        {
+            width: 100vw;
+            height: 100vh;
+            background: #34495e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main
+        {
+            width: 400px;
+            height: 400px;
+            border: solid 1px;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background: skyblue;
+            animation-name: hd,backgrounds,radius;
+            /*效果的优先级，后出现的优先级高*/
+            animation-duration: 4s,2s,1s;
+            /*如果是三个动画，两个时间，会从头计算时间，用第一个*/
+        }
+        
+        @keyframes hd
+        {
+            25%{
+                transform: translateX(300px);
+            }
+            50%{
+                transform: translate(300px,300px);
+                background: orangered;
+            }
+            75%{
+                transform: translateY(300px);
+            }
+        }
+        @keyframes backgrounds
+        {
+            25%{
+                background: yellow;
+                transform: translateX(300px);
+                /*前两秒优先执行该效果*/
+            }
+            50%{
+                background: orangered;
+            }
+            75%{
+                background: hotpink;
+            }
+        }
+        
+        @keyframes radius
+        {
+            25%{
+                border-radius: 50%;
+            }
+            50%{
+                border-radius: 0%;
+            }
+            75%{
+                border-radius: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div></div>
+</main>
+</body>
+</html>

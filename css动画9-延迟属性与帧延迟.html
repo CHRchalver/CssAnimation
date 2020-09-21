@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation-9</title>
+    <script src="https://kit.fontawesome.com/d1e517de9d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        
+        body
+        {
+            width: 100vw;
+            height: 100vh;
+            background: #34495e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background: #15202B;
+            animation-name: hd;
+            animation-duration: 4s;
+            animation-delay: 2s; /*等待时间结束，该语句的作用就完成了，不影响后面动画*/
+            animation-iteration-count: infinite;
+        }
+        @keyframes hd {
+            to{
+                transform: scale(2);
+            }
+            
+        }
+    </style>
+
+</head>
+<body>
+<div></div>
+</body>
+</html>

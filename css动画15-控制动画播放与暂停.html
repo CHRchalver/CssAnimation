@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation-15</title>
+</head>
+<body>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    
+    body
+    {
+        width: 100vw;
+        height: 100vh;
+        background: #474787;
+        display: grid;
+    }
+    main{
+        align-self: center;
+        justify-self: center;
+        width: 400px;
+        height: 200px;
+        display: grid;
+        grid-template: repeat(2,1fr)/repeat(4,1fr);
+    }
+    div{
+        text-align: center;
+        background: #ffd32a;
+        border: solid 1px #1e272e;
+        box-sizing: border-box;
+        position: relative;
+    }
+    div:nth-child(1)::before,
+    div:nth-child(5)::before{
+        animation-name: hd;
+        animation-iteration-count: infinite;
+        animation-duration: 2s;
+        z-index: 2;
+        animation-play-state: paused
+    }
+    div:nth-child(1)::before{
+        content: 'START';
+        width: 100px;
+        height: 100px;
+        background: #0fbcf9;
+        position: absolute;
+        left: 0;
+        top: 0;
+        animation-timing-function: steps(4,start);
+    }
+    div:nth-child(5)::before{
+        content: 'END';
+        width: 100px;
+        height: 100px;
+        background: #ffdd59;
+        position: absolute;
+        left: 0;
+        top: 0;
+        
+        animation-timing-function: steps(4,end);
+    }
+    @keyframes hd {
+        to{
+            transform: translateX(400px);
+        }
+    }
+    main:hover div::before{
+        animation-play-state: running ;
+    }
+</style>
+<main>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+</main>
+</body>
+</html>
